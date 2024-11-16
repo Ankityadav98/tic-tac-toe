@@ -18,6 +18,7 @@ const win = [
   [2, 4, 6],
 ];
 
+let count = 0;
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
@@ -29,13 +30,19 @@ boxes.forEach((box) => {
     }
     box.disabled = true;
 
+    count++;
     checkWinner();
+    if (msgContainer.classList.contains("hide") && count === 9) {
+      msg.innerText = `It's a DRAW! Please start a new game.`;
+      msgContainer.classList.remove("hide");
+    }
   });
 });
 
 newgameBtn.addEventListener("click", () => {
   enableBoxes();
   msgContainer.classList.add("hide");
+  count = 0;
 });
 
 resetBtn.addEventListener("click", () => {
@@ -43,6 +50,7 @@ resetBtn.addEventListener("click", () => {
   if (!msgContainer.classList.contains("hide")) {
     msgContainer.classList.add("hide");
   }
+  count = 0;
 });
 
 const enableBoxes = () => {
@@ -78,3 +86,4 @@ const showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
 };
+console.log(count);
