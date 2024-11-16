@@ -1,9 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  color: #e2f1e7;
 }
 body {
-  background-color: #9b9fb5;
+  background-color: #387478;
   text-align: center;
 }
 .container {
@@ -28,20 +29,20 @@ body {
   border: none;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   font-size: 8vmin;
-  background-color: #8c7284;
-  color: #b1b7d1;
+  background-color: #243642;
+  color: #e2f1e7;
 }
 #resetBtn {
   padding: 1rem;
   font-size: 1.25rem;
-  background-color: #d1b1c8;
+  background-color: #629584;
   border: none;
   border-radius: 1rem;
 }
 #newgame-btn {
   padding: 1rem;
   font-size: 1.25rem;
-  background-color: #d1b1c8;
+  background-color: #629584;
   border: none;
   border-radius: 1rem;
 }
